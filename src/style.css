@@ -1,0 +1,163 @@
+/*Met en place la police*/
+html *
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Supprime marge et padding*/
+html, body{
+    margin: 0;
+    padding: 0;
+    background-image: url("page_garde.jpg");
+    background-color: rgba(255, 255, 255, 0.356);
+}
+
+/*Crée un joli header*/
+header {
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+    background: rgba(121, 22, 121, 0.5);
+    color: black;
+    font-size: 20px;
+}
+
+/*Met un léger espace sur les côtés entre le header,
+    footer et entre les deux*/
+main {
+    margin: 2.5%;
+    padding: 2.5%;
+    height:100%;
+}
+
+/*Agrandit et centre l'input principal*/
+form{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+/*Agrandit l'inputbox*/
+#new_input_text{
+    min-width: 200px;
+    width: 15%;
+}
+
+/*Combine les deux textes*/
+.ret_status{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    color: white;
+}
+
+/*Met le status en gras*/
+#status{
+    font-weight: bold;
+}
+
+/*Espace proprement les deux tables*/
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-self: stretch;
+    flex: 1 1 0px;
+}
+
+/*Met en place deux colonnes pour les deux tables*/
+.side{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+/*Espace les boutons de controle des tables*/
+.controltable{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    flex: 0 0 75px;
+    align-items: center;
+}
+
+/*Permet de mettre une nouvelle ligne dans le flex*/
+.break{
+    flex-basis: 100%;
+    height: 0;
+}
+
+/*Centre les différents éléments des tables*/
+.maintable{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px 30px 30px 30px;
+
+
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+/*Met en place les espace entre les lignes*/
+tr{
+    height: 2.5em;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/*Utilisé pour faire les bords gauche*/
+tr td:first-child{
+    border-radius: 10px 0 0 10px;
+}
+
+/*Utilisé pour faire les bords droit*/
+tr td:last-child{
+    border-radius: 0 10px 10px 0;
+}
+
+/*Agrandit les cases*/
+td {
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-right:20px;
+  }
+
+/*Met une couleur rouge-orangé à gauche*/
+#tableleft td{
+    background-color: rgb(255, 86, 24);
+    font-weight: bold;
+}
+
+/*Met une couleur verte à droite*/
+#tableright td{
+    background-color: rgb(26, 126, 26);
+    font-weight: bold;
+}
+
+/* Important pour que le footer ne mange pas sur les listes */
+#left, #right{
+    margin-bottom: 100px;
+}
+
+/*Elargit et met de la couleur au footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.514);
+
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 10px;
+
+    margin: 0;
+    padding: 0;
+ }

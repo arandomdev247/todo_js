@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TO-DO List</title>
+        <meta name="description" content="TO-DO List">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body onload="loadDoc()">
+        
+        <header>
+            <h1>TODO LIST</h1>
+            <p>Une liste de tout les jours, pour des objectifs de tout les jours</p>
+        </header>
+
+        <main>
+            <form>
+                <input type="text" id="new_input_text">
+                <input type="button" id="new_input_button" value="Insérer" onclick="createEntry()">
+                <!--<input type="button" id="test" value="Test" onclick="myTest()"> FOR DEV PURPOSE ONLY-->
+                <input type="button" id="undo_button" value="Annuler" disabled=true onclick="undoLastAction()">
+                <p id="input_text"></p>
+            </form>
+            <div class="ret_status">
+                <p>Status : </p>
+                <p id="status">Tentative de connexion au serveur...</p>
+            </div>
+
+            <div class="container">
+                <div id="left" class="side">
+                    <div id = "tablecontrolleft" class="controltable">
+                        <div><input type="button" id="sel_all_left_button" value="Tout séléctionner" onclick="checkAll('tableleft', true)"></div>
+                        <div><input type="button" id="unsel_all_left_button" value="Tout déséléctionner" onclick="checkAll('tableleft', false)"></div>
+                        <div class="break"></div>
+                        <div><input type="button" id="modify_button" value="Modifier" onclick="modifyEntry('tableleft')"></div>
+                        <div><input type="button" id="finish_task_button" value="Terminer" onclick="finishEntry()"></div>
+                        <div><input type="button" id="delete_task_left_button" value="Supprimer" onclick="deleteEntry('tableleft')"></div>
+                    </div> 
+                    <table id="tableleft" class="maintable">
+                        <tbody id = "tbodyleft">
+                        </tbody>
+                    </table>
+
+                </div>
+                <div id="right" class="side">
+                    <div id = "tablecontrolright" class="controltable">
+                            <div><input type="button" id="sel_all_right_button" value="Tout séléctionner" onclick="checkAll('tableright', true)"></div>
+                            <div><input type="button" id="unsel_all_right_button" value="Tout déséléctionner" onclick="checkAll('tableright', false)"></div>
+                            <div><input type="button" id="delete_task_right_button" value="Supprimer" onclick="deleteEntry('tableright')"></div>
+                    </div>
+                    <table id="tableright" class="maintable">
+                        <tbody id = "tbodyright">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>Auteur : Benjamin Adamczyk</p>
+            <p><a href="mailto:benjamin.adamczyk@outlook.com">benjamin.adamczyk@outlook.com</a></p>
+        </footer>
+        <script src="projet.js"></script>
+    </body>
+</html>
